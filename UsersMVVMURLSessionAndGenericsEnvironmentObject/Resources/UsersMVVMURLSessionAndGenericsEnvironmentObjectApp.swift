@@ -11,7 +11,7 @@ import SwiftUI
 struct UsersMVVMURLSessionAndGenericsEnvironmentObjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeUserView().environmentObject(UserViewModel())
         }
     }
 }
