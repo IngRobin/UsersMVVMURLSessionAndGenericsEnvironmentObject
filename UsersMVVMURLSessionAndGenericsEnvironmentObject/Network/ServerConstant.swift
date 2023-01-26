@@ -22,6 +22,6 @@ class AppEnvironment {
         static let baseURL: String = "https://gorest.co.in/public/v2/"
     #elseif RELEASE
        static let environment: EnvironmentProject = .Release
-       static let baseURL: String = "https://gorest.co.in/public/v2/"
+       static let baseURL: String = "https://gorest.co.in/public/v1/"
     #endif
 }
