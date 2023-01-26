@@ -50,7 +50,7 @@ enum APIAssembleRequest {
     var path: String {
         switch self {
         case .getUsers:
-            return "user"
+            return "users"
         case .createUser:
             return "users"
         case .updateUser(let id):

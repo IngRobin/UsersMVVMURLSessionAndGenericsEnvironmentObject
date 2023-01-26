@@ -17,9 +17,9 @@ final class UserViewModel: ObservableObject {
     @Published var messageError: String?
     @Published var alertError: Bool = false
     
-    private let userRepository: UserRepository
+    private let userRepository: UserRepo
     
-    init(userRepository: UserRepository = UserRepository()){
+    init(userRepository: UserRepo = UserRepository()){
         self.userRepository = userRepository
     }
     
