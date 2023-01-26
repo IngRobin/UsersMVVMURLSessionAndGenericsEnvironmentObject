@@ -28,7 +28,9 @@ protocol RequestHandler {
 
 extension RequestHandler {
     func send(request: APIRequest, completion: @escaping APICompletionResponse) -> URLSessionDataTask? {
-        guard let url = URL(string: "\(urlBase)\(request.path)") else {
+        let baseUrl = AppEnvironment.baseURL
+        print(baseUrl)
+        guard let url = URL(string: "\(baseUrl)\(request.path)") else {
             completion(Response(nil, nil, NetworkError.urlError))
             return nil
         }
