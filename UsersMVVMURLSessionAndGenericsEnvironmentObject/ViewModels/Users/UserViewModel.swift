@@ -31,7 +31,7 @@ final class UserViewModel: ObservableObject {
                     self?.users = users
                 case .failure(let error):
                     self?.messageError = error.errorDescription
-                    self!.alertError = true
+                    self?.alertError = true
                 }
             }
         }
@@ -45,7 +45,7 @@ final class UserViewModel: ObservableObject {
                     print("OK actualizacion \(String(describing: user.name))")
                 case .failure(let error):
                     self?.messageError = error.errorDescription
-                    self!.alertError = true
+                    self?.alertError = true
                 }
             }
         }

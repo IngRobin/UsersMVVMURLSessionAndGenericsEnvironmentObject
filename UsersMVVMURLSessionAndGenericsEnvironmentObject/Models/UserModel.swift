@@ -44,7 +44,7 @@ import Foundation
 
 /// Struct for set model of User from URL
 /// Only in the property gender has different name
-struct UserModel: Decodable, Encodable {
+struct UserModel: Decodable, Encodable, Equatable {
     var id: Int
     var name: String?
     var email: String?

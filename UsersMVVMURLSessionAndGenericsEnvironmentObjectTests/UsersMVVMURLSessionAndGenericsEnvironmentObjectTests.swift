@@ -9,12 +9,26 @@ import XCTest
 @testable import UsersMVVMURLSessionAndGenericsEnvironmentObject
 
 final class UsersMVVMURLSessionAndGenericsEnvironmentObjectTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    var mockUserViewModel: UserViewModel!
+    
+    override func setUpWithError() throws{
+        mockUserViewModel = UserViewModel(userRepository: MockUser())
+        
     }
-
+    
+    func test_GetUsers(){
+        mockUserViewModel.getUsers()
+        XCTAssertEqual(mockUserViewModel.users, Bundle.getUsersJson())
+    }
+    
+    func test_FailGetUsers(){
+        mockUserViewModel = UserViewModel(userRepository:MockUserFail())
+        mockUserViewModel.getUsers()
+        XCTAssertTrue(mockUserViewModel.alertError == false)
+    }
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        mockUserViewModel = nil
     }
 }

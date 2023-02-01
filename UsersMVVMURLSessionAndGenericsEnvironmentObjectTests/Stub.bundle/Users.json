@@ -1,0 +1,72 @@
+[
+    {
+        "id": 204656,
+        "name": "Kalyani Acharya",
+        "email": "acharya_kalyani@becker-white.co",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 204655,
+        "name": "Divjot Reddy",
+        "email": "reddy_divjot@bergnaum.info",
+        "gender": "female",
+        "status": "inactive"
+    },
+    {
+        "id": 204581,
+        "name": "Baidehi Kapoor",
+        "email": "baidehi_kapoor@cruickshank.name",
+        "gender": "male",
+        "status": "inactive"
+    },
+    {
+        "id": 204503,
+        "name": "Chapal Varman",
+        "email": "varman_chapal@rippin.com",
+        "gender": "female",
+        "status": "inactive"
+    },
+    {
+        "id": 204424,
+        "name": "Navin Verma",
+        "email": "navin_verma@bosco-leffler.co",
+        "gender": "male",
+        "status": "inactive"
+    },
+    {
+        "id": 204423,
+        "name": "Gajadhar Nayar",
+        "email": "nayar_gajadhar@jacobi.org",
+        "gender": "female",
+        "status": "inactive"
+    },
+    {
+        "id": 204421,
+        "name": "Aditeya Nayar",
+        "email": "aditeya_nayar@paucek.org",
+        "gender": "female",
+        "status": "inactive"
+    },
+    {
+        "id": 204420,
+        "name": "Gajabahu Khan",
+        "email": "khan_gajabahu@friesen.io",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 204419,
+        "name": "Javas Khatri",
+        "email": "khatri_javas@purdy-klocko.biz",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 204329,
+        "name": "Chandramohan Chaturvedi",
+        "email": "chandramohan_chaturvedi@turcotte.com",
+        "gender": "male",
+        "status": "inactive"
+    }
+]
