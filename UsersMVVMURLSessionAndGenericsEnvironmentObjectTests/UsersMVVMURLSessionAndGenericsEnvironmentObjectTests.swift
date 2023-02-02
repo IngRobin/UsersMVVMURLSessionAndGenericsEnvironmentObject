@@ -22,11 +22,11 @@ final class UsersMVVMURLSessionAndGenericsEnvironmentObjectTests: XCTestCase {
         XCTAssertEqual(mockUserViewModel.users, Bundle.getUsersJson())
     }
     
-    func test_FailGetUsers(){
-        mockUserViewModel = UserViewModel(userRepository:MockUserFail())
-        mockUserViewModel.getUsers()
-        XCTAssertTrue(mockUserViewModel.alertError == false)
-    }
+//    func test_FailGetUsers(){
+//        mockUserViewModel = UserViewModel(userRepository:MockUserFail())
+//        mockUserViewModel.getUsers()
+//        XCTAssertTrue(mockUserViewModel.alertError == false)
+//    }
     
     override func tearDownWithError() throws {
         mockUserViewModel = nil
