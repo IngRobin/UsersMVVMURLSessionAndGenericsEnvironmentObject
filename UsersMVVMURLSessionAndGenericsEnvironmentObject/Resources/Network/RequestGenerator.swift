@@ -14,11 +14,11 @@ protocol RequestGenerator {
 extension RequestGenerator{
     func generateRequest(route: APIAssembleRequest, params: [Any?]?) -> APIRequest {
         switch route {
-        case .getUsers, .updateUser, .deleteUser:
+        case .getUsers, .deleteUser:
             var request = APIRequest(httpMethod: route.method, path: route.path)
             request.httpHeaders = route.headers
             return request
-        case .createUser:
+        case .createUser, .updateUser:
             let userRequest = params?.first as? UserModel
             var request = APIRequest(httpMethod: route.method, path: route.path, body: userRequest)
             request.httpHeaders = route.headers

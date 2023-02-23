@@ -10,10 +10,7 @@ import Foundation
 import SwiftUI
 
 struct UpdateUserView: View {
-    
-    
-    
-    
+
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var userViewModel : UserViewModel
     
@@ -57,12 +54,6 @@ struct UpdateUserView: View {
             }
             Spacer()
         }
-//        .onAppear{
-//            userRequest.id = user.id
-//            userRequest.name = user.name
-//            userRequest.email = user.email
-//            userRequest.gender = user.genre
-//        }
         .alert(isPresented: $userViewModel.alertError) {
             Alert(
                 title: Text("Error"),

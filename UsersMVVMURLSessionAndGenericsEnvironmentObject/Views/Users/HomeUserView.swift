@@ -24,22 +24,26 @@ struct HomeUserView: View {
                 }
             }
             .navigationTitle("Usuarios")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack {
+                        NavigationLink(destination: CreateUserView()) {
+                            Image(systemName: "plus")
+
+                        }
+                    }
+
+                }
+
+            }
         }
         .onAppear{
             userViewModel.getUsers()
         }
         .alert(isPresented: $userViewModel.alertError) {
-            Alert(
-                title: Text("Error"),
-                message: Text(userViewModel.messageError?.description ?? "Error"),
-                primaryButton: .default(
-                    Text("Try Again"),
-                    action: userViewModel.getUsers
-                ),
-                secondaryButton: .destructive(
-                    Text("Cancel")
-                )
-            )
+            getAlert(alertType: userViewModel.alertType) {
+                userViewModel.getUsers()
+            }
         }
     }
 }

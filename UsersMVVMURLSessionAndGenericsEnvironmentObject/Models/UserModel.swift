@@ -45,7 +45,7 @@ import Foundation
 /// Struct for set model of User from URL
 /// Only in the property gender has different name
 struct UserModel: Decodable, Encodable, Equatable {
-    var id: Int
+    var id: Int?
     var name: String?
     var email: String?
     var genre: String?
@@ -66,6 +66,14 @@ struct UserModel: Decodable, Encodable, Equatable {
         self.email = try container.decode(String.self, forKey: .email)
         self.genre = try container.decode(String.self, forKey: .genre)
         self.status = try container.decode(String.self, forKey: .status)
+    }
+    
+    init(id: Int? = nil, name : String? = nil, genre : String? = nil, email : String? = nil, status : String? = nil) {
+        self.id = id
+        self.name = name
+        self.genre = genre
+        self.email = email
+        self.status = status
     }
 }
 

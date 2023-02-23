@@ -7,7 +7,7 @@
 		<key>UsersMVVMURLSessionAndGenericsEnvironmentObject.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>UsersMVVMURLSessionAndGenericsEnvironmentObjectQA.xcscheme_^#shared#^_</key>
 		<dict>
@@ -23,6 +23,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>6F5FEB7729789BAD005799CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6F5FEBB02982DACF005799CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

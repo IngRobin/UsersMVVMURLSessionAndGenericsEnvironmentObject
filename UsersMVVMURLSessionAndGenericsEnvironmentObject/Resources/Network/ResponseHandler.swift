@@ -34,7 +34,7 @@ extension ResponseHandler{
             return
         }
         do {
-            let userDataModel = try JSONDecoder().decode(decoder.self , from: data)
+            let userDataModel = try JSONDecoder().decode(decoder.self, from: data)
             completionBlock(.success(userDataModel))
         } catch {
             completionBlock(.failure(.decodingError(error)))

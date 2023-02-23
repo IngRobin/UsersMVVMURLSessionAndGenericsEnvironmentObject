@@ -17,10 +17,10 @@ protocol UserData {
 final class UserDatasource: UserData, RequestGenerator, RequestHandler, ResponseHandler {
     
     func sendRequest<T: Decodable>(_ route: APIAssembleRequest, _ type: T.Type, _ params: Any?..., completionBlock: @escaping HandlerUser<T>){
-        
         let request = self.generateRequest(route: route, params: params)
         _ = self.send(request: request) { response in
             self.handleResponse(response, type, completionBlock: completionBlock)
         }
-    }    
+        
+    }
 }

@@ -10,6 +10,9 @@
 		6F26B7C12989BC09006EED45 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26B7C02989BC09006EED45 /* MockUser.swift */; };
 		6F26B7CC2989D253006EED45 /* Stub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F26B7C92989D148006EED45 /* Stub.bundle */; };
 		6F26B7CE2989DFB5006EED45 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26B7CD2989DFB5006EED45 /* BundleExtension.swift */; };
+		6F26B82429954053006EED45 /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26B82329954053006EED45 /* CreateUserView.swift */; };
+		6F26B83029A770D2006EED45 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26B82F29A770D2006EED45 /* Alerts.swift */; };
+		6F26B83329A7D13C006EED45 /* Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26B83229A7D13C006EED45 /* Queues.swift */; };
 		6F5FEB7C29789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5FEB7B29789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift */; };
 		6F5FEB7E29789BAD005799CE /* HomeUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5FEB7D29789BAD005799CE /* HomeUserView.swift */; };
 		6F5FEB8029789BAF005799CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F5FEB7F29789BAF005799CE /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		6F26B7C02989BC09006EED45 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		6F26B7C92989D148006EED45 /* Stub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Stub.bundle; sourceTree = "<group>"; };
 		6F26B7CD2989DFB5006EED45 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		6F26B82329954053006EED45 /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
+		6F26B82F29A770D2006EED45 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		6F26B83229A7D13C006EED45 /* Queues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queues.swift; sourceTree = "<group>"; };
 		6F5FEB7829789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersMVVMURLSessionAndGenericsEnvironmentObject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5FEB7B29789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift; sourceTree = "<group>"; };
 		6F5FEB7D29789BAD005799CE /* HomeUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserView.swift; sourceTree = "<group>"; };
@@ -84,6 +90,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F26B82A299ED591006EED45 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				6F5FEB7D29789BAD005799CE /* HomeUserView.swift */,
+				6F5FEB9B297A0970005799CE /* UpdateUserView.swift */,
+				6F26B82329954053006EED45 /* CreateUserView.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		6F26B82E29A770C5006EED45 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				6F26B82F29A770D2006EED45 /* Alerts.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		6F26B83129A7D122006EED45 /* Queues */ = {
+			isa = PBXGroup;
+			children = (
+				6F26B83229A7D13C006EED45 /* Queues.swift */,
+			);
+			path = Queues;
+			sourceTree = "<group>";
+		};
 		6F5FEB6F29789BAD005799CE = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +140,6 @@
 				6F5FEB8B29789E17005799CE /* Models */,
 				6F5FEB8E2978AE36005799CE /* ViewModels */,
 				6F5FEB8A29789D92005799CE /* Views */,
-				6F5FEB962978E2B3005799CE /* Network */,
 				6F5FEB8929789D26005799CE /* Resources */,
 				6F5FEB8129789BAF005799CE /* Preview Content */,
 			);
@@ -126,6 +157,9 @@
 		6F5FEB8929789D26005799CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6F26B83129A7D122006EED45 /* Queues */,
+				6F26B82E29A770C5006EED45 /* Alerts */,
+				6F5FEB962978E2B3005799CE /* Network */,
 				6F5FEB7B29789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift */,
 				6F5FEB7F29789BAF005799CE /* Assets.xcassets */,
 			);
@@ -135,8 +169,7 @@
 		6F5FEB8A29789D92005799CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6F5FEB7D29789BAD005799CE /* HomeUserView.swift */,
-				6F5FEB9B297A0970005799CE /* UpdateUserView.swift */,
+				6F26B82A299ED591006EED45 /* Users */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,11 +336,14 @@
 				6F5FEB902978B14B005799CE /* UserViewModel.swift in Sources */,
 				6F5FEBAA297EFFC2005799CE /* RequestHandler.swift in Sources */,
 				6F5FEB9C297A0970005799CE /* UpdateUserView.swift in Sources */,
+				6F26B83329A7D13C006EED45 /* Queues.swift in Sources */,
 				6F5FEBA2297BFA1C005799CE /* APIRequest.swift in Sources */,
 				6F5FEB8D2978A3BF005799CE /* UserModel.swift in Sources */,
 				6F5FEB932978D8C5005799CE /* UserRepository.swift in Sources */,
 				6F5FEBAC297F0B49005799CE /* ResponseHandler.swift in Sources */,
+				6F26B82429954053006EED45 /* CreateUserView.swift in Sources */,
 				6F5FEBA6297EDE72005799CE /* ServerConstant.swift in Sources */,
+				6F26B83029A770D2006EED45 /* Alerts.swift in Sources */,
 				6F5FEB7C29789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

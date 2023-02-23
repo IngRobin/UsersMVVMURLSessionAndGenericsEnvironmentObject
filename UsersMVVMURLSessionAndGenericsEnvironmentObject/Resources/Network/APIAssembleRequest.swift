@@ -74,23 +74,6 @@ enum APIAssembleRequest {
                     HTTPHeader(field: HTTPHeaderField.contentType.rawValue, value: ContentType.json.rawValue)]
         }
     }
-    
-    func typeModel<T: Decodable>() -> T {
-//        switch self {
-//        case .getUsers:
-//            return [UserModel].self as! T
-//        case .createUser:
-//            return UserModel.self  as! T
-//        case .updateUser:
-//            return UserModel.self  as! T
-//        case .deleteUser:
-//            return UserModel.self  as! T
-//        }
-        
-        return UserModel.self as! T
-    }
-    
-        
 }
 
 
