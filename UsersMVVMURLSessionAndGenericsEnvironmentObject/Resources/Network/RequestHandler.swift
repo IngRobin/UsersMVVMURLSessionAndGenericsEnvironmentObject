@@ -22,11 +22,19 @@ public struct Response {
 }
 
 
+/// Protocol for define the operations to the external API with Json
 protocol RequestHandler {
     func send(request: APIRequest, completion: @escaping APICompletionResponse) -> URLSessionDataTask?
 }
 
 extension RequestHandler {
+    
+    /// Function for make oeprations to the external API with Json
+    /// It's designed for  build dynamic request with parameters of the external API
+    /// - Parameters:
+    ///   - request: Internal Object built with the parameters asked for the external API for build the Json Request
+    ///   - completion: closure for obtain and send the response of external API
+    /// - Returns: Object Task with the context of the call to external API
     func send(request: APIRequest, completion: @escaping APICompletionResponse) -> URLSessionDataTask? {
         let baseUrl = AppEnvironment.baseURL
         guard let url = URL(string: "\(baseUrl)\(request.path)") else {

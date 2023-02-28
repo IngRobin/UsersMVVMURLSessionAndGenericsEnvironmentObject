@@ -11,6 +11,7 @@ let accessToken = "4dfa830ba988219d7ae75b3b267538bbeaba79d2da09afdfa9fba0eed7a59
 let token = "Bearer \(accessToken)"
 
 
+/// Enum for choise the environment of the app
 enum EnvironmentProject {
   case Development
   case Release

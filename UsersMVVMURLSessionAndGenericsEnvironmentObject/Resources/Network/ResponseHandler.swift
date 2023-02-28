@@ -14,11 +14,19 @@ import Foundation
 
 typealias HandlerUser<T: Decodable> = (Result<T, NetworkError>) -> Void
 
+
+/// Protocol for define operation that handle the response of external API
 protocol ResponseHandler {
     func handleResponse<T: Decodable>(_ response: Response, _ decoder: T.Type, completionBlock: HandlerUser<T>)
 }
 
 extension ResponseHandler{
+    
+    /// Function for get the response of external API and decode in a Object, this depends of the decoder parameter
+    /// - Parameters:
+    ///   - response: Object with the response of external API without decoding
+    ///   - decoder: Type of decoder for do this operation and convert the response in a object
+    ///   - completionBlock: Closure for send the response with decoded Object
     func handleResponse<T: Decodable>(_ response: Response, _ decoder: T.Type, completionBlock: HandlerUser<T>) {
         if let error = response.error {
             completionBlock(.failure(.transportError(error)))

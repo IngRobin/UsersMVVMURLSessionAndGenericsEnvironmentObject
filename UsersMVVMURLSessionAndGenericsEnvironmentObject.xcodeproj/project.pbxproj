@@ -13,6 +13,7 @@
 		6F26B82429954053006EED45 /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26B82329954053006EED45 /* CreateUserView.swift */; };
 		6F26B83029A770D2006EED45 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26B82F29A770D2006EED45 /* Alerts.swift */; };
 		6F26B83329A7D13C006EED45 /* Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26B83229A7D13C006EED45 /* Queues.swift */; };
+		6F26B83629A8375F006EED45 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F26B83429A8375F006EED45 /* CoreDataModel.xcdatamodeld */; };
 		6F5FEB7C29789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5FEB7B29789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift */; };
 		6F5FEB7E29789BAD005799CE /* HomeUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5FEB7D29789BAD005799CE /* HomeUserView.swift */; };
 		6F5FEB8029789BAF005799CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F5FEB7F29789BAF005799CE /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		6F26B82329954053006EED45 /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
 		6F26B82F29A770D2006EED45 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		6F26B83229A7D13C006EED45 /* Queues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queues.swift; sourceTree = "<group>"; };
+		6F26B83529A8375F006EED45 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		6F5FEB7829789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersMVVMURLSessionAndGenericsEnvironmentObject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5FEB7B29789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMVVMURLSessionAndGenericsEnvironmentObjectApp.swift; sourceTree = "<group>"; };
 		6F5FEB7D29789BAD005799CE /* HomeUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		6F5FEB6F29789BAD005799CE = {
 			isa = PBXGroup;
 			children = (
+				6F26B83429A8375F006EED45 /* CoreDataModel.xcdatamodeld */,
 				6F5FEB7A29789BAD005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObject */,
 				6F5FEBB22982DACF005799CE /* UsersMVVMURLSessionAndGenericsEnvironmentObjectTests */,
 				6F5FEB7929789BAD005799CE /* Products */,
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F26B83629A8375F006EED45 /* CoreDataModel.xcdatamodeld in Sources */,
 				6F5FEB7E29789BAD005799CE /* HomeUserView.swift in Sources */,
 				6F5FEBA4297C0D10005799CE /* APIAssembleRequest.swift in Sources */,
 				6F5FEB982978E2F6005799CE /* NetworkError.swift in Sources */,
@@ -663,6 +667,19 @@
 			defaultConfigurationName = Development;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6F26B83429A8375F006EED45 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6F26B83529A8375F006EED45 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 6F26B83529A8375F006EED45 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6F5FEB7029789BAD005799CE /* Project object */;
 }

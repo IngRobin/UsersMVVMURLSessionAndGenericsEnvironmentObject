@@ -7,11 +7,16 @@
 
 import Foundation
 
+
+/// Protocol for make alternative DispatchQueue using dependency injection
 protocol DispatchQueueType {
     func async(execute work: @escaping @convention(block) () -> Void)
 }
- 
+
+
 extension DispatchQueue: DispatchQueueType {
+    /// Function arranged to create a DispatchQueue
+    /// - Parameter work: Action that DispatchQueue execute
     func async(execute work: @escaping @convention(block) () -> Void) {
         async(group: nil, qos: .unspecified, flags: [], execute: work)
     }
