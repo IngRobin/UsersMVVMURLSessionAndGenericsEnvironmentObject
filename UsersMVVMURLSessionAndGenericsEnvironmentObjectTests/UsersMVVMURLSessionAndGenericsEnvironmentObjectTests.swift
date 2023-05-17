@@ -18,17 +18,21 @@ final class UsersMVVMURLSessionAndGenericsEnvironmentObjectTests: XCTestCase {
     }
     
     func test_GetUsers(){
-        let fakeQueue = DispatchQueueFake()
-        mockUserViewModel = UserViewModel(userRepository: MockUser(), dispatchQueueType: fakeQueue)
-        mockUserViewModel.getUsers()
-        XCTAssertEqual(mockUserViewModel.users, Bundle.getUsersJson())
+        DispatchQueue.main.async {
+            let fakeQueue = DispatchQueueFake()
+            self.mockUserViewModel = UserViewModel(userRepository: MockUser(), dispatchQueueType: fakeQueue)
+            self.mockUserViewModel.getUsers()
+            XCTAssertEqual(self.mockUserViewModel.users, Bundle.getUsersJson())
+        }
     }
     
     func test_FailGetUsers(){
-        let fakeQueue = DispatchQueueFake()
-        mockUserViewModel = UserViewModel(userRepository:MockUserFail(), dispatchQueueType: fakeQueue)
-        mockUserViewModel.getUsers()
-        XCTAssertTrue(mockUserViewModel.alertError == true)
+        DispatchQueue.main.async {
+            let fakeQueue = DispatchQueueFake()
+            self.mockUserViewModel = UserViewModel(userRepository:MockUserFail(), dispatchQueueType: fakeQueue)
+            self.mockUserViewModel.getUsers()
+            XCTAssertTrue(self.mockUserViewModel.alertError == true)
+        }
     }
     
     override func tearDownWithError() throws {

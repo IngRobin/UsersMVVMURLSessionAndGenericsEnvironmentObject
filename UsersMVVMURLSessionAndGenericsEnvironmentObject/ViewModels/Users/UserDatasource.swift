@@ -26,7 +26,7 @@ final class UserDatasource: UserData, RequestGenerator, RequestHandler, Response
     ///   - params: Optional parameter with the object User for make operations of crud
     ///   - completionBlock: Closure for retrieve the response of operation, and send to UserRepository
     func sendRequest<T: Decodable>(_ route: APIAssembleRequest, _ type: T.Type, _ params: Any?..., completionBlock: @escaping HandlerUser<T>){
-        let request = self.generateRequest(route: route, params: params)
+        let request = self.generateRequest(route: route, body: params)
         _ = self.send(request: request) { response in
             self.handleResponse(response, type, completionBlock: completionBlock)
         }

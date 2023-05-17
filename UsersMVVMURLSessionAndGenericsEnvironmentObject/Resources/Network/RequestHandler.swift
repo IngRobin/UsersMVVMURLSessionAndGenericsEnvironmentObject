@@ -37,11 +37,20 @@ extension RequestHandler {
     /// - Returns: Object Task with the context of the call to external API
     func send(request: APIRequest, completion: @escaping APICompletionResponse) -> URLSessionDataTask? {
         let baseUrl = AppEnvironment.baseURL
-        guard let url = URL(string: "\(baseUrl)\(request.path)") else {
+        
+        var urlComponents = URLComponents()
+        urlComponents.scheme = baseUrl.scheme
+        urlComponents.host = baseUrl.host
+        urlComponents.path = baseUrl.path
+        urlComponents.port = baseUrl.port
+        urlComponents.queryItems = request.queryItems
+        
+        guard let url = urlComponents.url?.appendingPathComponent(request.path) else {
             completion(Response(nil, nil, NetworkError.urlError))
+            
             return nil
         }
-        
+        print(url)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.httpMethod.rawValue
         urlRequest.httpBody = request.body

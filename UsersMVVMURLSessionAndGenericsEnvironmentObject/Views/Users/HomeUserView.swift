@@ -14,14 +14,22 @@ struct HomeUserView: View {
     var body: some View {
         NavigationView{
             VStack{
-                List($userViewModel.users, id: \.id){
-                    $user in
-                    NavigationLink {
-                        UpdateUserView(user: user)
-                    } label: {
-                        Text("\(user.name ?? "No name")")
-                    }
+                //                List($userViewModel.users, id: \.id){
+                //                    $user in
+                //                    NavigationLink {
+                //                        UpdateUserView(user: user)
+                //                    } label: {
+                //                        Text("\(user.name ?? "No name")")
+                //                    }
+                //                }
+                
+                List(userViewModel.users) { user in
+                    UserDetailView(user: user)
+                        .onAppear {
+                            userViewModel.getUsers(user)
+                        }
                 }
+                
             }
             .navigationTitle("Usuarios")
             .toolbar {
@@ -29,17 +37,17 @@ struct HomeUserView: View {
                     HStack {
                         NavigationLink(destination: CreateUserView()) {
                             Image(systemName: "plus")
-
+                            
                         }
                     }
-
+                    
                 }
-
+                
             }
         }
-        .onAppear{
-            userViewModel.getUsers()
-        }
+        //        .onAppear{
+        //            userViewModel.getUsers()
+        //        }
         .alert(isPresented: $userViewModel.alertError) {
             getAlert(alertType: userViewModel.alertType) {
                 userViewModel.getUsers()

@@ -45,7 +45,7 @@ import Foundation
 /// Struct for set model of User from URL
 /// Only in the property gender has different name
 /// This model is used for Request and Response of external API
-struct UserModel: Decodable, Encodable, Equatable {
+struct UserModel: Decodable, Encodable, Equatable, Identifiable {
     var id: Int?
     var name: String?
     var email: String?

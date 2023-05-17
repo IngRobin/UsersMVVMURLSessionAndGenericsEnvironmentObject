@@ -30,7 +30,7 @@ enum APIAssembleRequest {
     case deleteUser(_ id: Int)
     
     
-    /// Computed var for get HTTP verb for d each operation in external API
+    /// Computed var for get HTTP verb for each operation in external API
     var method: HttpMethod {
         switch self {
         case .getUsers:
@@ -61,14 +61,14 @@ enum APIAssembleRequest {
     }
     
     
-    /// Computded var for define headers of request HTTP, this depends of types of operations
+    /// Computed var for define headers of request HTTP, this depends of types of operations
     /// Default case is when is not neccesary bearer value in the request
     var headers: [HTTPHeader]? {
         switch self{
         case .createUser, .updateUser, .deleteUser:
             return [HTTPHeader(field: HTTPHeaderField.acceptType.rawValue, value: ContentType.json.rawValue),
                     HTTPHeader(field: HTTPHeaderField.contentType.rawValue, value: ContentType.json.rawValue),
-                    HTTPHeader(field: HTTPHeaderField.authentication.rawValue, value: "Bearer \(accessToken)")]
+                    HTTPHeader(field: HTTPHeaderField.authentication.rawValue, value: kBearerToken)]
         default:
             return [HTTPHeader(field: HTTPHeaderField.acceptType.rawValue, value: ContentType.json.rawValue),
                     HTTPHeader(field: HTTPHeaderField.contentType.rawValue, value: ContentType.json.rawValue)]
